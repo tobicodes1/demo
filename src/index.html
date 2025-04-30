@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Frontend execution test</title>
+  </head>
+  <body>
+   <h1>This is a test!</h1>
+  <!--making request, using fetch API that is a function  (takes a number of arguments) used in front end code to send network requests
+  //pass the url that i want to send the request to as the first argument
+  //indexhtml file is coming from local host 8080 so that's where the browser will automatically send these requests
+  //fetch function will send a get request to the back end, browser will run this and send a request to endpoint defined on the server
+  // will send back the array of user data then passed to call back function, converted to js object and use final result in this callback
+  //console log to debug and lok at js code -->
+   <script>
+     fetch('/api/users')
+            .then(response => response.json())
+            .then(users => console.log(users));
+  </script>
+  </body>
+
+</html>
+
